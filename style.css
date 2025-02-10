@@ -11,11 +11,15 @@ body{
   background: #56baed;
 }
 
-.select-box{
+.select-box, .play-board{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.select-box{
+  
   background: #fff;
   padding: 20px 25px 25px;
   border-radius: 5px;
@@ -66,4 +70,44 @@ body{
 
 .options button.playerY{
   margin-left: 5px;
+}
+
+.play-board .details{
+  background: #fff;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.play-board .details .players{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.play-board .details span{
+  background: red;
+  width: 100%;
+  border-radius: 5px;
+  padding: 7px 0;
+  font-size: 19px;
+  font-weight: 500;
+  cursor: default;
+  text-align: center;
+}
+
+.play-board .play-area{
+  margin-top: 20px;
+}
+
+.play-board section{
+  display: flex;
+}
+
+.play-board section span{
+  display: block;
+  margin: 2px;
+  height: 80px;
+  width: 80px;
+  background: #fff;
+  border-radius: 5px;
 }
