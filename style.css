@@ -85,14 +85,19 @@ body{
 }
 
 .play-board .details span{
-  background: red;
   width: 100%;
+  color: #56baed;
   border-radius: 5px;
   padding: 7px 0;
   font-size: 19px;
   font-weight: 500;
   cursor: default;
   text-align: center;
+}
+
+.details span.active{
+  color: #fff;
+  background: #56baed;
 }
 
 .play-board .play-area{
@@ -110,4 +115,8 @@ body{
   width: 80px;
   background: #fff;
   border-radius: 5px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 80px;
+  color: #56baed;
 }
