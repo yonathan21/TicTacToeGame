@@ -72,6 +72,10 @@ body{
   margin-left: 5px;
 }
 
+.play-board{
+  display: none;
+}
+
 .play-board .details{
   background: #fff;
   padding: 7px;
