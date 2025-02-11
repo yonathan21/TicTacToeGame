@@ -37,20 +37,26 @@ function clickedBox(element){
   }
 
   element.style.pointerEvents = "none";
-  //console.log(element); 
-  bot();
+  let randomDelayTime = (Math.random() * 1000) + 200;
+  setTimeout(() => {
+    bot();
+  }, randomDelayTime);
+
 }
 
 function bot(){
+
   let array =[];
+
   for(let i = 0; i < allBox.length; i++){
     if(allBox[i].childElementCount === 0){
       array.push(i);
       //console.log(i + " " + 'has no child element' );
     }
   }
+
   let randomBox = array[Math.floor(Math.random() * array.length)];
-  console.log(randomBox);
+  
   if(array.length > 0){
     if(players.classList.contains("player")){
       allBox[randomBox].innerHTML =  `<i class = "${playerXIcon}"></i>`;
