@@ -174,7 +174,9 @@ body{
   border-radius: 5px;
   max-width: 350px;
   width: 100%;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
 .result-box .won-text{
