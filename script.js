@@ -30,6 +30,6 @@ function clickedBox(element){
   if(players.classList.contains("player")){
     element.innerHTML =  `<i class = "${playerOIcon}"></i>`;
   }else{
-    element.innerHTML =  `<i class = "${playerOIcon}"></i>`;
+    element.innerHTML =  `<i class = "${playerXIcon}"></i>`;
   }
 }
