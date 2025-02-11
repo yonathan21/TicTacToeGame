@@ -37,6 +37,7 @@ function clickedBox(element){
   }
 
   element.style.pointerEvents = "none";
+
   let randomDelayTime = (Math.random() * 1000) + 200;
   setTimeout(() => {
     bot();
@@ -51,7 +52,6 @@ function bot(){
   for(let i = 0; i < allBox.length; i++){
     if(allBox[i].childElementCount === 0){
       array.push(i);
-      //console.log(i + " " + 'has no child element' );
     }
   }
 
@@ -60,11 +60,12 @@ function bot(){
   if(array.length > 0){
     if(players.classList.contains("player")){
       allBox[randomBox].innerHTML =  `<i class = "${playerXIcon}"></i>`;
-      players.classList.add('active');
+      players.classList.remove('active');
     }else{
       allBox[randomBox].innerHTML =  `<i class = "${playerOIcon}"></i>`;
-      players.classList.add('active');
+      players.classList.remove('active');
     }
   }
-  //console.log(array);
+  
+  allBox[randomBox].style.pointerEvents = 'none';
 }
