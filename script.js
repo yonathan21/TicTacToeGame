@@ -27,9 +27,38 @@ let playerXIcon = "fas fa-times";
 let playerOIcon = "far fa-circle";
 
 function clickedBox(element){
+  
   if(players.classList.contains("player")){
     element.innerHTML =  `<i class = "${playerOIcon}"></i>`;
+    players.classList.add('active');
   }else{
     element.innerHTML =  `<i class = "${playerXIcon}"></i>`;
+    players.classList.add('active');
   }
+
+  element.style.pointerEvents = "none";
+  //console.log(element); 
+  bot();
+}
+
+function bot(){
+  let array =[];
+  for(let i = 0; i < allBox.length; i++){
+    if(allBox[i].childElementCount === 0){
+      array.push(i);
+      //console.log(i + " " + 'has no child element' );
+    }
+  }
+  let randomBox = array[Math.floor(Math.random() * array.length)];
+  console.log(randomBox);
+  if(array.length > 0){
+    if(players.classList.contains("player")){
+      allBox[randomBox].innerHTML =  `<i class = "${playerXIcon}"></i>`;
+      players.classList.add('active');
+    }else{
+      allBox[randomBox].innerHTML =  `<i class = "${playerOIcon}"></i>`;
+      players.classList.add('active');
+    }
+  }
+  //console.log(array);
 }
